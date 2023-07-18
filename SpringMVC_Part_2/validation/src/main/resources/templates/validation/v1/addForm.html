@@ -20,7 +20,7 @@
 
     <form action="item.html" th:action th:object="${item}" method="post">
         <div>
-            <label for="itemName" th:text="#{label.item.id}">상품명</label>
+            <label for="itemName" th:text="#{label.item.itemName}">상품명</label>
             <input type="text" id="itemName" th:field="*{itemName}" class="form-control" placeholder="이름을 입력하세요">
         </div>
         <div>
@@ -41,7 +41,7 @@
             <div class="col">
                 <button class="w-100 btn btn-secondary btn-lg"
                         onclick="location.href='items.html'"
-                        th:onclick="|location.href='@{/message/items}'|"
+                        th:onclick="|location.href='@{/validation/v1/items}'|"
                         type="button" th:text="#{button.cancel}">취소</button>
             </div>
         </div>
